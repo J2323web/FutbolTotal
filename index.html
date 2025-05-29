@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fútbol Total</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="assets/icons/futbol_total-removebg-preview.png" type="image/x-icon">
+  <link rel="icon" href="assets/icons/futbol_total-removebg-preview.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png" sizes="180x180">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" crossorigin="anonymous"></script>
+</head>
+<body data-theme="light" data-lang="es">
+
+  <!-- Header con menú y login -->
+  <header>
+    <div class="logo">Fútbol Total</div>
+    <nav>
+      <div id="buscador">
+  <input type="text" id="buscar-input" placeholder="Buscar noticias..." autocomplete="off">
+  <ul id="sugerencias" class="sugerencias-lista"></ul>
+  <button id="buscar-btn">Buscar</button>
+</div>
+      <ul>
+        <li><a href="ultimas.html" target="_blank">Últimas Noticias</a></li>
+        <li><a href="colombia.html" target="_blank">Fútbol Colombia</a></li>
+        <li><a href="sobre.html" target="_blank">Sobre Nosotros</a></li>
+        <li><a href="politica.html" target="_blank">Política</a></li>
+        <li><a href="contacto.html" target="_blank">Contacto</a></li>
+        <li class="dropdown">
+          <a href="#">Configuraciones ⚙️</a>
+          <ul class="dropdown-menu">
+            <li><a href="#" id="theme-toggle">Cambiar Tema</a></li>
+            <li><a href="#" id="lang-toggle">Cambiar Idioma</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <div class="login-btn">
+      <button class="btn-social" id="login-google">Login con Google</button>
+      <div id="user-info" style="display: none; align-items: center; gap: 0.5rem;">
+        <img id="user-pic" style="width: 32px; border-radius: 50%;" />
+        <span id="user-name"></span>
+        <button class="btn-social" id="logout-btn">Salir</button>
+      </div>
+    </div>
+  </header>
+
+<!-- Sección de noticias -->
+<section id="ultimas" class="fade-in">
+  <h2>Últimas Noticias</h2>
+  <div id="news-container"></div>
+</section>
+
+  <!-- Contenido principal -->
+  <main>
+    <!-- Comentarios -->
+    <section id="comentarios-section" class="fade-in">
+      <h2>Comentarios</h2>
+      <div id="comentarios-lista"></div>
+      <div id="comentarios-form" style="display: none;">
+        <textarea id="comentario-input" placeholder="Escribe tu comentario..."></textarea>
+        <button id="publicar-comentario">Publicar</button>
+      </div>
+    </section>
+
+    <!-- Fútbol Colombiano -->
+    <section id="colombiano" class="fade-in">
+      <h2>Fútbol Colombiano</h2>
+      <p>Próximamente contenido sobre el fútbol de Colombia.</p>
+    </section>
+
+    <!-- Sobre Nosotros -->
+    <section id="sobre" class="fade-in">
+      <h2>Sobre Nosotros</h2>
+      <p>Fútbol Total es un sitio dedicado a los fanáticos del fútbol colombiano e internacional...</p>
+    </section>
+
+    <!-- Política de Privacidad -->
+    <section id="politica" class="fade-in">
+      <h2>Política de Privacidad</h2>
+      <p>En Fútbol Total respetamos tu privacidad...</p>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="fade-in">
+      <h2>Contacto</h2>
+      <form id="contact-form">
+        <input type="text" name="nombre" placeholder="Tu nombre" required />
+        <input type="email" name="email" placeholder="Tu correo electrónico" required />
+        <textarea name="mensaje" placeholder="Escribe tu mensaje aquí..." rows="5" required></textarea>
+        <button type="submit">Enviar mensaje</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Sidebar con anuncios -->
+  <aside class="sidebar">
+    <h3>Anuncios</h3>
+    <div class="anuncio">⚽ ¡Compra camisetas oficiales aquí! <a href="https://www.hillside.com.co/collections/catalogo-deportivo-cali?srsltid=AfmBOoqMoSILuIXDo3oHX66MxHJqZrnWQrhVE0MlSY7k03EWndk6BY7S" target="_blank">Ver más</a></div>
+    <div class="anuncio">📺 Suscríbete a nuestro canal de YouTube <a href="https://www.youtube.com/@deportivocalioficial/videos" target="_blank">Aquí</a></div>
+    <div class="anuncio">⚽ ¡Mira partido GRATIS legales aqui! <a href="https://www.winsportsmas.com/" target="_blank">Aquí</a> </div>
+  </aside>
+
+  <!-- Footer -->
+  <footer class="fade-in">© 2025 Fútbol Total - Todos los Derechos Reservados</footer>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+
+  <!-- Configuración Firebase -->
+  <script src="js/firebase-config.js" ></script>
+  <!-- Lógica principal -->
+  <script src="js/script.js" defer></script>
+</body>
+</html>
